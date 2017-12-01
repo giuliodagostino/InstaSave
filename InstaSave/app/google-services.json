@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "595398073401",
+    "firebase_url": "https://instasave-dcb0e.firebaseio.com",
+    "project_id": "instasave-dcb0e",
+    "storage_bucket": "instasave-dcb0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595398073401:android:fc8b60ecbf5c54fb",
+        "android_client_info": {
+          "package_name": "photodownload.video.save"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595398073401-earugdcnr39lnpu6vfjc4v3sea34bjah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR9tKX_1Lks4b9nnwkrhWuCXWdv05Su8k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="photodownload.video.save.Activities.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/relativeContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCardView"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true"
+                android:layout_height="300dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/mProgressBar"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:theme="@style/CircularProgress" />
+
+                <ImageView
+                    android:id="@+id/playIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_play_circle_filled_black_24dp"/>
+
+                <ImageView
+                    android:id="@+id/imageDownloadedID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_below="@id/imageCardView"
+                    android:layout_marginTop="5dp"
+                    card_view:cardElevation="3dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <io.gloxey.cfv.CFTextView
+                        android:id="@+id/captionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:textColor="#212121"
+                        android:layout_marginLeft="5dp"
+                        app:font_name="@string/sintony"
+                        android:text="" />
+
+                        <io.gloxey.cfv.CFButton
+                            android:id="@+id/repostButton"
+                            android:layout_below="@id/captionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="@string/reposttext"
+                            android:padding="5dp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:background="@drawable/drawable_selector"
+                            android:textSize="13sp"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            app:font_name="@string/sintony"
+                            android:layout_marginBottom="5dp"/>
+                        <io.gloxey.cfv.CFButton
+                            android:id="@+id/copyTextButton"
+                            android:layout_below="@id/captionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="@string/copytext"
+                            android:padding="5dp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:background="@drawable/drawable_selector"
+                            android:textSize="13sp"
+                            app:font_name="@string/sintony"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toLeftOf="@+id/repostButton"
+                            android:layout_marginBottom="5dp"/>
+                        <io.gloxey.cfv.CFButton
+                            android:layout_below="@id/captionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="@string/copyHashtag"
+                            android:id="@+id/copyHashtag"
+                            android:padding="5dp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:background="@drawable/drawable_selector"
+                            android:textSize="13sp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/copyTextButton"
+                            app:font_name="@string/sintony"
+                            android:layout_marginBottom="5dp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <com.google.android.gms.ads.NativeExpressAdView
+                    android:id="@+id/nativeAD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="320x300"
+                    android:layout_below="@id/cardView"
+                    ads:adUnitId="ca-app-pub-2144167408510195/6716704097">
+                </com.google.android.gms.ads.NativeExpressAdView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
